@@ -1,0 +1,12 @@
+package com.example.app2;
+import androidx.core.app.NotificationCompat;
+public final class GlobalNotifications {
+    private static NotificationCompat.Builder sGlobalNotificationCompatBuilder = null;
+    private GlobalNotifications(){}
+    public static void setNotificationCompatBuilderInstance (NotificationCompat.Builder builder){
+        sGlobalNotificationCompatBuilder = builder;
+    }
+    public static NotificationCompat.Builder getNotificationCompatBuilderInstance(){
+        return sGlobalNotificationCompatBuilder;
+    }
+}
